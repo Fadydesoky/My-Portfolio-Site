@@ -4,7 +4,7 @@ A modern, responsive portfolio showcasing expertise in **Data Analytics**, **Dat
 
 ## Portfolio
 
-This project is designed for deployment on [Vercel](https://vercel.com). Add the production URL here once a custom domain or deployment URL has been finalized.
+This project is designed for deployment on Vercel. Add the production URL here once a custom domain or deployment URL has been finalized.
 
 ## 📋 About
 
@@ -156,7 +156,7 @@ pnpm start
 
 ## 🌐 Deployment
 
-This project is automatically deployed to [Vercel](https://vercel.com) on every push to the `main` branch.
+This project is automatically deployed to Vercel on every push to the `main` branch.
 
 View deployment status: https://vercel.com/fadydesokys-projects
 
@@ -173,16 +173,6 @@ View deployment status: https://vercel.com/fadydesokys-projects
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [v0 Documentation](https://v0.app/docs)
 - [Vercel Documentation](https://vercel.com/docs)
-
-## 🔧 Development with v0
-
-This repository is linked to a [v0](https://v0.app) project. Continue developing and iterate on the design at:
-
-[Continue working on v0](https://v0.app/chat/projects/prj_qv02o5EFM8HjfZo1U2UvUF3pvt3H)
-
-## License
-
-No license file is currently included. Add a license before redistributing this portfolio as open-source software.
 
 ## 🙋 Contributing
 
