@@ -28,9 +28,9 @@ export default function Page() {
 
       <header id="top" className="hero wrap">
         <div className="hero-copy">
-          <p className="eyebrow">DATA ANALYST · ASPIRING DATA ENGINEER</p>
+          <p className="eyebrow">DATA ANALYTICS · DATA ENGINEERING · SUSTAINABLE COMPUTING</p>
           <h1>Turning complex data into <em>clear direction.</em></h1>
-          <p className="lede">I&apos;m Fady, a software engineering student and data analytics intern based in Cairo. I build thoughtful dashboards, predictive models, and sustainable data solutions.</p>
+          <p className="profile-title">Data Analytics &amp; Reporting @ Nestlé | Data Management &amp; Enterprise Systems | Data Engineering &amp; Analytics | Green Software &amp; Sustainable Computing</p><p className="lede">I&apos;m Fady, a software engineering student and data analytics intern based in Cairo. I build thoughtful dashboards, predictive models, and sustainable data solutions.</p>
           <div className="hero-actions"><a className="button primary" href="#projects">View my work <span>↗</span></a><a className="button secondary" href="mailto:fadydesoky45@gmail.com">Let&apos;s connect</a></div>
         </div>
         <div className="hero-stat"><div className="orb"><div className="orb-core">FD</div></div><p><strong>3+</strong> years exploring<br />data, systems &amp; impact.</p></div>
