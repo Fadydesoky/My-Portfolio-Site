@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 const papers = [
@@ -31,11 +34,25 @@ const papers = [
 ]
 
 export default function ResearchPage() {
+  const [dark, setDark] = useState(false)
+
+  useEffect(() => {
+    setDark(window.localStorage.getItem('portfolio-theme') === 'dark')
+  }, [])
+
+  function toggleTheme() {
+    setDark((current) => {
+      const next = !current
+      window.localStorage.setItem('portfolio-theme', next ? 'dark' : 'light')
+      return next
+    })
+  }
+
   return (
-    <main className="site research-page">
+    <main className={dark ? 'site dark research-page' : 'site research-page'}>
       <nav className="nav wrap">
         <Link className="brand" href="/" aria-label="Fady Desoky home"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-pic-ZnrqPpIpQOMpbd5ljARzdK40Yky5Dc.jpg" alt="Fady Desoky" /><b>Fady Desoky</b></Link>
-        <div className="nav-links research-nav"><Link href="/">Portfolio</Link><span className="nav-divider" aria-hidden="true">/</span><Link href="/#about">About</Link><Link href="/#certifications">Certifications</Link><Link href="/#contact">Contact</Link><Link className="research-parent" href="/research" aria-current="page"><span>Research</span><span aria-hidden="true">↗</span></Link></div>
+        <div className="nav-links research-nav"><Link href="/">Portfolio</Link><span className="nav-divider" aria-hidden="true">/</span><Link href="/#about">About</Link><Link href="/#certifications">Certifications</Link><Link href="/#contact">Contact</Link><Link className="research-parent" href="/research" aria-current="page"><span>Research</span><span aria-hidden="true">↗</span></Link><button className="theme-toggle" onClick={toggleTheme} aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}>{dark ? '☼' : '◐'}</button></div>
       </nav>
       <header id="top" className="research-hero wrap">
         <p className="eyebrow">RESEARCH &amp; PUBLICATIONS</p>
