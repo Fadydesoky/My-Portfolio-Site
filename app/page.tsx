@@ -18,7 +18,7 @@ export default function Page() {
   return (
     <main className={dark ? 'site dark' : 'site'}>
       <nav className="nav wrap">
-        <a className="brand" href="#top" aria-label="Fady Desoky home"><span>FD</span><b>Fady Desoky</b></a>
+        <a className="brand" href="#top" aria-label="Fady Desoky home"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-pic-ZnrqPpIpQOMpbd5ljARzdK40Yky5Dc.jpg" alt="Fady Desoky" /><b>Fady Desoky</b></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
         <div className={menuOpen ? 'nav-links open' : 'nav-links'}>
           <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/research">Research</a><a href="#contact">Contact</a>
@@ -33,7 +33,7 @@ export default function Page() {
           <p className="profile-title">Data Analytics &amp; Reporting @ Nestlé | Data Management &amp; Enterprise Systems | Data Engineering &amp; Analytics | Green Software &amp; Sustainable Computing</p><p className="lede">I&apos;m Fady, a software engineering student and data analytics intern based in Cairo. I build thoughtful dashboards, predictive models, and sustainable data solutions.</p>
           <div className="hero-actions"><a className="button primary" href="#projects">View my work <span>↗</span></a><a className="button secondary" href="mailto:fadydesoky45@gmail.com">Let&apos;s connect</a></div>
         </div>
-        <div className="hero-stat"><div className="orb"><img className="profile-photo" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-pic-ZnrqPpIpQOMpbd5ljARzdK40Yky5Dc.jpg" alt="Portrait of Fady Desoky" /></div><p><strong>3+</strong> years exploring<br />data, systems &amp; impact.</p></div>
+        
       </header>
 
       <section id="about" className="about wrap section-grid"><div className="section-label">01 / ABOUT</div><div><h2>Curious by nature.<br /><span>Impact-driven by choice.</span></h2><p>I&apos;m a senior Software Engineering student at Sadat Academy for Management Sciences, with a focus on analytics, data engineering, and sustainability. My work sits at the intersection of technical systems and the people they serve.</p><p>From multinational HR operations to green software research, I enjoy making messy information useful, measurable, and actionable.</p></div></section>
