@@ -20,6 +20,16 @@ const projects = [
 
 const skills = ['Python', 'SQL', 'Power BI', 'Pandas', 'NumPy', 'Matplotlib', 'MySQL', 'MongoDB', 'React.js', 'Flask', 'Docker', 'Git']
 
+const certifications = [
+  { title: 'Introduction to Business Intelligence', issuer: 'Corporate Finance Institute (CFI)', date: 'Aug 2023', focus: 'Business Intelligence' },
+  { title: 'AWS Cloud Foundations', issuer: 'Amazon Web Services', date: 'Dec 2024', focus: 'Cloud Computing · Cloud Foundations' },
+  { title: 'HCIA-Cloud Computing V5.5', issuer: 'Huawei ICT Academy · IFCE', date: 'Jul 2025', focus: 'Cloud Computing IaaS · Cloud Computing' },
+  { title: 'Getting Started with AI on Jetson Nano', issuer: 'NVIDIA', date: 'Apr 2026', focus: 'Artificial Intelligence' },
+  { title: 'AI for Business Professionals', issuer: 'HP LIFE', date: 'May 2026', focus: 'Artificial Intelligence · Business' },
+  { title: 'Introduction to Climate Risk Informed Decision Analysis (CRIDA)', issuer: 'UNESCO', date: 'Apr 2026', focus: 'Climate Risk Assessment · Decision Analysis' },
+  { title: 'Software Engineer', issuer: 'HackerRank', date: 'Apr 2026', focus: 'MySQL · Software Development' },
+]
+
 export default function Page() {
   const [dark, setDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -57,6 +67,8 @@ export default function Page() {
       <section id="projects" className="projects wrap section-grid"><div className="section-label">03 / SELECTED WORK</div><div className="project-list">{projects.map(project => <article className="project-card" key={project.title}><div className="project-number">{project.number}</div><div><p className="eyebrow">{project.eyebrow}</p><h2>{project.title}</h2><p className="muted">{project.text}</p><div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div><div className="project-links"><a className="text-link" href={project.github} target="_blank" rel="noreferrer">GitHub ↗</a>{project.live && <a className="text-link" href={project.live} target="_blank" rel="noreferrer">Live project ↗</a>}</div></div></article>)}</div></section>
 
       <section className="skills wrap section-grid"><div className="section-label">04 / TOOLKIT</div><div><h2>Tools I use to<br /><span>make things happen.</span></h2><div className="skill-list">{skills.map(skill => <span key={skill}>{skill}</span>)}</div></div></section>
+
+      <section id="certifications" className="certifications wrap section-grid"><div className="section-label">05 / CREDENTIALS</div><div><h2>Proof of practice.<br /><span>Built for what&apos;s next.</span></h2><p className="muted credentials-intro">A focused selection of certifications that reinforce my work across business intelligence, cloud systems, AI, and sustainable decision-making.</p><div className="credential-list">{certifications.map((credential) => <article className="credential-card" key={credential.title}><div className="credential-mark" aria-hidden="true">{credential.issuer.slice(0, 2).toUpperCase()}</div><div><p className="credential-date">{credential.date}</p><h3>{credential.title}</h3><p className="company">{credential.issuer}</p><p className="muted">Focus: {credential.focus}</p></div></article>)}</div></div></section>
 
       <section id="contact" className="contact wrap"><p className="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make something<br /><em>meaningful.</em></h2><div className="contact-actions"><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a><a className="button secondary" href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp / SMS <span>↗</span></a></div><p className="location">Based in Nasr City, Cairo, Egypt</p></section>
       <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div className="footer-nav"><a href="#top">Back to top ↑</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/research">Research</a><a href="#contact">Contact</a></div><div><a href="mailto:fadydesoky45@gmail.com">Email</a><a href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://github.com/fadydesoky" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>

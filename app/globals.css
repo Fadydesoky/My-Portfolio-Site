@@ -40,3 +40,15 @@ a { color: inherit; text-decoration: none; }
 @keyframes data-pulse { 50% { opacity: .25; transform: scale(.72); } }
 @media (prefers-reduced-motion: reduce) { .hero-visual::after { animation: none; } }
 @media (max-width: 700px) { .hero-visual::before { inset: 0 0 8%; } .site.dark .brand b { color: var(--ink-strong); } }
+
+.credential-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 34px; }
+.credential-card { display: grid; grid-template-columns: 42px 1fr; gap: 14px; padding: 18px; min-height: 154px; border: 1px solid var(--line); background: color-mix(in srgb, var(--surface-raised) 62%, transparent); transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+.credential-card:hover { transform: translateY(-3px); border-color: var(--green); background: color-mix(in srgb, var(--accent-soft) 48%, var(--surface-raised)); }
+.credential-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; color: var(--paper); background: var(--green); font-size: 11px; font-weight: 800; letter-spacing: .04em; }
+.credential-card h3 { margin: 2px 0 5px; font-size: 16px; line-height: 1.3; font-weight: 650; }
+.credential-date { margin: 0 0 7px !important; color: var(--green) !important; font-size: 10px !important; letter-spacing: .08em; text-transform: uppercase; }
+.credential-card .company { margin: 0 0 4px !important; }
+.credentials-intro { margin-top: -8px; }
+.site.dark .credential-card { background: color-mix(in srgb, var(--surface-raised) 88%, transparent); }
+.site.dark .credential-card:hover { background: color-mix(in srgb, var(--accent-soft) 62%, var(--surface-raised)); }
+@media (max-width: 700px) { .credential-list { grid-template-columns: 1fr; } .credential-card { min-height: auto; } }
