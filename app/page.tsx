@@ -62,7 +62,7 @@ export default function Page() {
           <p className="eyebrow">DATA ANALYTICS · DATA ENGINEERING · SUSTAINABLE COMPUTING</p>
           <h1>Turning complex data into <em>clear direction.</em></h1>
           <p className="profile-title">Data Analytics &amp; Reporting @ Nestlé | Data Management &amp; Enterprise Systems | Data Engineering &amp; Analytics | Green Software &amp; Sustainable Computing</p><p className="lede">I&apos;m Fady, a software engineering student and data analytics intern based in Cairo. I build thoughtful dashboards, predictive models, and sustainable data solutions.</p>
-          <div className="hero-actions"><a className="button primary" href="#projects">View my work <span>↗</span></a><a className="button secondary" href="#contact">Let&apos;s connect</a></div>
+          <div className="hero-actions"><a className="button primary" href="#projects">View my work <span>↗</span></a><a className="button secondary" href="mailto:fadydesoky45@gmail.com?subject=Portfolio%20conversation">Let&apos;s connect <span>↗</span></a></div>
         </div>
         <div className="hero-visual" aria-hidden="true">
           <div className="orbit orbit-one" />
