@@ -35,7 +35,7 @@ export default function ResearchPage() {
     <main className="site research-page">
       <nav className="nav wrap">
         <Link className="brand" href="/" aria-label="Fady Desoky home"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-pic-ZnrqPpIpQOMpbd5ljARzdK40Yky5Dc.jpg" alt="Fady Desoky" /><b>Fady Desoky</b></Link>
-        <div className="nav-links research-nav"><Link href="/">Portfolio</Link><span className="nav-divider" aria-hidden="true">/</span><Link href="/#about">About</Link><Link href="/#contact">Contact</Link><Link className="research-parent" href="/research" aria-current="page"><span>Research</span><span aria-hidden="true">↗</span></Link></div>
+        <div className="nav-links research-nav"><Link href="/">Portfolio</Link><span className="nav-divider" aria-hidden="true">/</span><Link href="/#about">About</Link><Link href="/#certifications">Certifications</Link><Link href="/#contact">Contact</Link><Link className="research-parent" href="/research" aria-current="page"><span>Research</span><span aria-hidden="true">↗</span></Link></div>
       </nav>
       <header id="top" className="research-hero wrap">
         <p className="eyebrow">RESEARCH &amp; PUBLICATIONS</p>
@@ -48,7 +48,7 @@ export default function ResearchPage() {
       </section>
       <section className="research-cta wrap"><p className="eyebrow">COLLABORATE</p><h2>Have a research question<br /><em>in mind?</em></h2><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a></section>
       <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div className="footer-nav"><a href="#top">Back to top ↑</a><Link href="/">Portfolio</Link><Link href="/#about">About</Link><Link href="/#experience">Experience</Link><Link href="/#projects">Projects</Link><Link href="/#contact">Contact</Link></div><Link href="/">Back to portfolio ↗</Link></footer>
-      <div className="bottom-navigator" aria-label="Section navigation"><a href="#top">Top</a><a href="/">Portfolio</a><a href="/#about">About</a><a href="/#experience">Experience</a><a href="/#projects">Projects</a><a href="/research" aria-current="page">Research</a><a href="/#contact">Contact</a></div>
+      <div className="bottom-navigator" aria-label="Section navigation"><a href="#top">Top</a><a href="/">Portfolio</a><a href="/#about">About</a><a href="/#experience">Experience</a><a href="/#projects">Projects</a><a href="/#certifications">Certifications</a><a href="/research" aria-current="page">Research</a><a href="/#contact">Contact</a></div>
     </main>
   )
 }

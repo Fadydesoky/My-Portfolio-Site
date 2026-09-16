@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const experience = [
   { role: 'Data Analytics & Reporting Intern', company: 'Nestlé Business Solutions', date: 'Apr 2026 — Present', text: 'Developing interactive Power BI and Excel dashboards, structuring datasets, and contributing to forecasting models across MENA.' },
@@ -34,14 +34,26 @@ export default function Page() {
   const [dark, setDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
+  useEffect(() => {
+    setDark(window.localStorage.getItem('portfolio-theme') === 'dark')
+  }, [])
+
+  function toggleTheme() {
+    setDark((current) => {
+      const next = !current
+      window.localStorage.setItem('portfolio-theme', next ? 'dark' : 'light')
+      return next
+    })
+  }
+
   return (
     <main className={dark ? 'site dark' : 'site'}>
       <nav className="nav wrap">
         <a className="brand" href="#top" aria-label="Fady Desoky Saeed Abdelaziz home"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-pic-ZnrqPpIpQOMpbd5ljARzdK40Yky5Dc.jpg" alt="Fady Desoky Saeed Abdelaziz" /><b>Fady Desoky Saeed Abdelaziz</b></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
         <div className={menuOpen ? 'nav-links open' : 'nav-links'}>
-<a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a className="route-link" href="/research">Research <span aria-hidden="true">↗</span></a><a href="#contact">Contact</a>
-          <button className="theme-toggle" onClick={() => setDark(!dark)} aria-label="Toggle color theme">{dark ? '☼' : '◐'}</button>
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a className="route-link" href="/research">Research <span aria-hidden="true">↗</span></a><a href="#contact">Contact</a>
+          <button className="theme-toggle" onClick={toggleTheme} aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}>{dark ? '☼' : '◐'}</button>
         </div>
       </nav>
 
@@ -50,7 +62,7 @@ export default function Page() {
           <p className="eyebrow">DATA ANALYTICS · DATA ENGINEERING · SUSTAINABLE COMPUTING</p>
           <h1>Turning complex data into <em>clear direction.</em></h1>
           <p className="profile-title">Data Analytics &amp; Reporting @ Nestlé | Data Management &amp; Enterprise Systems | Data Engineering &amp; Analytics | Green Software &amp; Sustainable Computing</p><p className="lede">I&apos;m Fady, a software engineering student and data analytics intern based in Cairo. I build thoughtful dashboards, predictive models, and sustainable data solutions.</p>
-          <div className="hero-actions"><a className="button primary" href="#projects">View my work <span>↗</span></a><a className="button secondary" href="mailto:fadydesoky45@gmail.com">Let&apos;s connect</a></div>
+          <div className="hero-actions"><a className="button primary" href="#projects">View my work <span>↗</span></a><a className="button secondary" href="#contact">Let&apos;s connect</a></div>
         </div>
         <div className="hero-visual" aria-hidden="true">
           <div className="orbit orbit-one" />
@@ -72,7 +84,7 @@ export default function Page() {
 
       <section id="contact" className="contact wrap"><p className="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make something<br /><em>meaningful.</em></h2><div className="contact-actions"><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a><a className="button secondary" href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp / SMS <span>↗</span></a></div><p className="location">Based in Nasr City, Cairo, Egypt</p></section>
       <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div className="footer-nav"><a href="#top">Back to top ↑</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/research">Research</a><a href="#contact">Contact</a></div><div><a href="mailto:fadydesoky45@gmail.com">Email</a><a href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://github.com/fadydesoky" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
-      <div className="bottom-navigator" aria-label="Portfolio section navigation"><a href="#top">Top</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+      <div className="bottom-navigator" aria-label="Portfolio section navigation"><a href="#top">Top</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a></div>
     </main>
   )
 }
