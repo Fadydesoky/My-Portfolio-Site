@@ -27,7 +27,7 @@ export default function Page() {
   return (
     <main className={dark ? 'site dark' : 'site'}>
       <nav className="nav wrap">
-        <a className="brand" href="#top" aria-label="Fady Desoky home"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-pic-ZnrqPpIpQOMpbd5ljARzdK40Yky5Dc.jpg" alt="Fady Desoky" /><b>Fady Desoky</b></a>
+        <a className="brand" href="#top" aria-label="Fady Desoky Saeed Abdelaziz home"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-pic-ZnrqPpIpQOMpbd5ljARzdK40Yky5Dc.jpg" alt="Fady Desoky Saeed Abdelaziz" /><b>Fady Desoky Saeed Abdelaziz</b></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
         <div className={menuOpen ? 'nav-links open' : 'nav-links'}>
 <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a className="route-link" href="/research">Research <span aria-hidden="true">↗</span></a><a href="#contact">Contact</a>
