@@ -35,9 +35,23 @@ const papers = [
 
 export default function ResearchPage() {
   const [dark, setDark] = useState(false)
+  const [atBottom, setAtBottom] = useState(false)
 
   useEffect(() => {
     setDark(window.localStorage.getItem('portfolio-theme') === 'dark')
+
+    const updateBottomState = () => {
+      const distanceFromBottom = document.documentElement.scrollHeight - (window.scrollY + window.innerHeight)
+      setAtBottom(distanceFromBottom <= 8)
+    }
+
+    updateBottomState()
+    window.addEventListener('scroll', updateBottomState, { passive: true })
+    window.addEventListener('resize', updateBottomState)
+    return () => {
+      window.removeEventListener('scroll', updateBottomState)
+      window.removeEventListener('resize', updateBottomState)
+    }
   }, [])
 
   function toggleTheme() {
@@ -65,7 +79,7 @@ export default function ResearchPage() {
       </section>
       <section className="research-cta wrap"><p className="eyebrow">COLLABORATE</p><h2>Have a research question<br /><em>in mind?</em></h2><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a></section>
       <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div className="footer-nav"><a href="#top">Back to top ↑</a><Link href="/">Portfolio</Link><Link href="/#about">About</Link><Link href="/#experience">Experience</Link><Link href="/#projects">Projects</Link><Link href="/#contact">Contact</Link></div><Link href="/">Back to portfolio ↗</Link></footer>
-      <div className="bottom-navigator" aria-label="Section navigation"><a href="#top">Top</a><a href="/">Portfolio</a><a href="/#about">About</a><a href="/#experience">Experience</a><a href="/#projects">Projects</a><a href="/#certifications">Certifications</a><a href="/research" aria-current="page">Research</a><a href="/#contact">Contact</a></div>
+      <div className={atBottom ? 'bottom-navigator is-hidden' : 'bottom-navigator'} aria-label="Section navigation"><a href="#top">Top</a><a href="/">Portfolio</a><a href="/#about">About</a><a href="/#experience">Experience</a><a href="/#projects">Projects</a><a href="/#certifications">Certifications</a><a href="/research" aria-current="page">Research</a><a href="/#contact">Contact</a></div>
     </main>
   )
 }

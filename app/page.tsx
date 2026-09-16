@@ -33,9 +33,23 @@ const certifications = [
 export default function Page() {
   const [dark, setDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [atBottom, setAtBottom] = useState(false)
 
   useEffect(() => {
     setDark(window.localStorage.getItem('portfolio-theme') === 'dark')
+
+    const updateBottomState = () => {
+      const distanceFromBottom = document.documentElement.scrollHeight - (window.scrollY + window.innerHeight)
+      setAtBottom(distanceFromBottom <= 8)
+    }
+
+    updateBottomState()
+    window.addEventListener('scroll', updateBottomState, { passive: true })
+    window.addEventListener('resize', updateBottomState)
+    return () => {
+      window.removeEventListener('scroll', updateBottomState)
+      window.removeEventListener('resize', updateBottomState)
+    }
   }, [])
 
   function toggleTheme() {
@@ -84,7 +98,7 @@ export default function Page() {
 
       <section id="contact" className="contact wrap"><p className="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make something<br /><em>meaningful.</em></h2><div className="contact-actions"><a className="button primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=fadydesoky45@gmail.com" target="_blank" rel="noreferrer">Start a conversation <span>↗</span></a><a className="button secondary" href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp / SMS <span>↗</span></a></div><p className="location">Based in Nasr City, Cairo, Egypt</p></section>
       <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div className="footer-nav"><a href="#top">Back to top ↑</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/research">Research</a><a href="#contact">Contact</a></div><div><a href="https://mail.google.com/mail/?view=cm&fs=1&to=fadydesoky45@gmail.com" target="_blank" rel="noreferrer">Email</a><a href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://github.com/fadydesoky" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
-      <div className="bottom-navigator" aria-label="Portfolio section navigation"><a href="#top">Top</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a></div>
+      <div className={atBottom ? 'bottom-navigator is-hidden' : 'bottom-navigator'} aria-label="Portfolio section navigation"><a href="#top">Top</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a></div>
     </main>
   )
 }
