@@ -15,7 +15,7 @@ This portfolio demonstrates a comprehensive background in:
 - **Data Engineering & Analytics**
 - **Green Software & Sustainable Computing**
 
-Currently based in **Nasr City, Cairo, Egypt** | Software Engineering Student & Data Analytics Intern
+Based in **Nasr City, Cairo, Egypt** |
 
 ## Features
 
