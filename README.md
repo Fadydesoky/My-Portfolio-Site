@@ -154,12 +154,6 @@ pnpm start
 - Optimized page titles and descriptions
 - Mobile-responsive design for better SERP ranking
 
-## 🌐 Deployment
-
-This project is automatically deployed to Vercel on every push to the `main` branch.
-
-View deployment status: https://vercel.com/fadydesokys-projects
-
 ## 📞 Contact
 
 - **Email**: [fadydesoky45@gmail.com](mailto:fadydesoky45@gmail.com)
