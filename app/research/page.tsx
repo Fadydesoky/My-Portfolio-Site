@@ -34,10 +34,10 @@ export default function ResearchPage() {
   return (
     <main className="site research-page">
       <nav className="nav wrap">
-        <Link className="brand" href="/"><span>FD</span><b>Fady Desoky</b></Link>
+        <Link className="brand" href="/" aria-label="Fady Desoky home"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-pic-ZnrqPpIpQOMpbd5ljARzdK40Yky5Dc.jpg" alt="Fady Desoky" /><b>Fady Desoky</b></Link>
         <div className="nav-links research-nav"><Link href="/">Portfolio</Link><Link href="/#about">About</Link><Link href="/#contact">Contact</Link></div>
       </nav>
-      <header className="research-hero wrap">
+      <header id="top" className="research-hero wrap">
         <p className="eyebrow">RESEARCH &amp; PUBLICATIONS</p>
         <h1>Questions worth<br /><em>investigating.</em></h1>
         <p className="lede">My research explores the relationship between data, intelligent systems, urban mobility, and sustainable software.</p>
@@ -47,7 +47,7 @@ export default function ResearchPage() {
         <div>{papers.map((paper) => <article className="paper" key={paper.title}><div className="paper-number">{paper.number}</div><div><p className="paper-meta">{paper.status} · {paper.date}</p><h2>{paper.title}</h2><p className="paper-venue">{paper.venue}</p><p className="muted">{paper.summary}</p><p className="paper-location">{paper.location}</p></div></article>)}</div>
       </section>
       <section className="research-cta wrap"><p className="eyebrow">COLLABORATE</p><h2>Have a research question<br /><em>in mind?</em></h2><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a></section>
-      <footer className="footer wrap"><span>© 2026 Fady Desoky</span><Link href="/">Back to portfolio ↗</Link></footer>
+      <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div className="footer-nav"><a href="#top">Back to top ↑</a><Link href="/">Portfolio</Link><Link href="/#about">About</Link><Link href="/#experience">Experience</Link><Link href="/#projects">Projects</Link><Link href="/#contact">Contact</Link></div><Link href="/">Back to portfolio ↗</Link></footer>
     </main>
   )
 }

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 
 const experience = [
+  { role: 'Advanced Data Analytics', company: 'National Telecommunication Institute (NTI) · Internship', date: 'Aug 2026 — Sep 2026 · 2 mos', text: 'Advanced training in data analysis and statistical data analysis, delivered remotely from Egypt.' },
   { role: 'Data Analytics Intern', company: 'Nestlé Business Solutions', date: 'Apr 2026 — Present', text: 'Developing interactive Power BI and Excel dashboards, structuring datasets, and contributing to forecasting models across MENA.' },
   { role: 'HR Operations Process Optimizer', company: 'Nestlé Business Solutions', date: 'Jul 2025 — Mar 2026', text: 'Collected, cleaned, and validated employee data with regional HRS teams across KSA, Kuwait, Oman, Bahrain, Qatar, and UAE.' },
   { role: 'Data Analytics & Urban Mobility Research Intern', company: 'Nile University', date: 'Jun 2025 — Sep 2025', text: 'Analyzed urban mobility patterns for the NetMob25 Data Challenge; research was accepted as a conference poster.' },
@@ -58,7 +59,7 @@ export default function Page() {
       <section className="skills wrap section-grid"><div className="section-label">04 / TOOLKIT</div><div><h2>Tools I use to<br /><span>make things happen.</span></h2><div className="skill-list">{skills.map(skill => <span key={skill}>{skill}</span>)}</div></div></section>
 
       <section id="contact" className="contact wrap"><p className="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make something<br /><em>meaningful.</em></h2><div className="contact-actions"><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a><a className="button secondary" href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp / SMS <span>↗</span></a></div><p className="location">Based in Nasr City, Cairo, Egypt</p></section>
-      <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div><a href="mailto:fadydesoky45@gmail.com">Email</a><a href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://github.com/fadydesoky" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+      <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div className="footer-nav"><a href="#top">Back to top ↑</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/research">Research</a><a href="#contact">Contact</a></div><div><a href="mailto:fadydesoky45@gmail.com">Email</a><a href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://github.com/fadydesoky" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
     </main>
   )
 }
