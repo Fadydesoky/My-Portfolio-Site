@@ -21,7 +21,7 @@ export default function Page() {
         <a className="brand" href="#top" aria-label="Fady Desoky home"><span>FD</span><b>Fady Desoky</b></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
         <div className={menuOpen ? 'nav-links open' : 'nav-links'}>
-          <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+          <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/research">Research</a><a href="#contact">Contact</a>
           <button className="theme-toggle" onClick={() => setDark(!dark)} aria-label="Toggle color theme">{dark ? '☼' : '◐'}</button>
         </div>
       </nav>
@@ -44,8 +44,8 @@ export default function Page() {
 
       <section className="skills wrap section-grid"><div className="section-label">04 / TOOLKIT</div><div><h2>Tools I use to<br /><span>make things happen.</span></h2><div className="skill-list">{skills.map(skill => <span key={skill}>{skill}</span>)}</div></div></section>
 
-      <section id="contact" className="contact wrap"><p className="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make something<br /><em>meaningful.</em></h2><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a></section>
-      <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div><a href="mailto:fadydesoky45@gmail.com">Email</a><a href="https://github.com/fadydesoky" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+      <section id="contact" className="contact wrap"><p className="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make something<br /><em>meaningful.</em></h2><div className="contact-actions"><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a><a className="button secondary" href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp / SMS <span>↗</span></a></div><p className="location">Based in Nasr City, Cairo, Egypt</p></section>
+      <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div><a href="mailto:fadydesoky45@gmail.com">Email</a><a href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://github.com/fadydesoky" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
     </main>
   )
 }
