@@ -1,47 +1,51 @@
+'use client'
+
+import { useState } from 'react'
+
+const experience = [
+  { role: 'Data Analytics Intern', company: 'Nestlé Business Solutions', date: 'Apr 2026 — Present', text: 'Developing interactive Power BI and Excel dashboards, structuring datasets, and contributing to forecasting models across MENA.' },
+  { role: 'HR Operations Process Optimizer', company: 'Nestlé Business Solutions', date: 'Jul 2025 — Mar 2026', text: 'Collected, cleaned, and validated employee data with regional HRS teams across KSA, Kuwait, Oman, Bahrain, Qatar, and UAE.' },
+  { role: 'Data Analytics & Urban Mobility Research Intern', company: 'Nile University', date: 'Jun 2025 — Sep 2025', text: 'Analyzed urban mobility patterns for the NetMob25 Data Challenge; research was accepted as a conference poster.' },
+  { role: 'Software Engineering & IT Intern', company: 'Maher Ahmed Belal Consulting', date: 'Jun 2025 — Aug 2025', text: 'Built and optimized internal document workflow tools, reducing processing time by 30%.' },
+]
+
+const skills = ['Python', 'SQL', 'Power BI', 'Pandas', 'NumPy', 'Matplotlib', 'MySQL', 'MongoDB', 'React.js', 'Flask', 'Docker', 'Git']
+
 export default function Page() {
+  const [dark, setDark] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
-    <main
-      style={{
-        colorScheme: 'light dark',
-        position: 'relative',
-        display: 'flex',
-        minHeight: '100vh',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'light-dark(#fff, #000)',
-        color: 'light-dark(#000, #fff)',
-      }}
-    >
-      <svg
-        aria-hidden="true"
-        style={{ width: 80, height: 80 }}
-        width={80}
-        height={80}
-        fill="none"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        stroke="currentColor"
-        strokeWidth="0.5"
-      >
-        <path
-          d="M14.2 14.2H17V6.9375C17 4.76288 15.2371 3 13.0625 3H5.8V5.8M14.2 14.2V7.79063L7.79062 14.2H14.2ZM14.2 14.2V17H6.9375C4.76288 17 3 15.2371 3 13.0625V5.8H5.8M5.8 5.8V12.2313L12.2313 5.8H5.8Z"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <p
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: 'calc(50% + 56px)',
-          transform: 'translateX(-50%)',
-          whiteSpace: 'nowrap',
-          fontSize: '14px',
-          fontWeight: 500,
-          color: 'light-dark(#71717a, #a1a1aa)',
-        }}
-      >
-        Your v0 generation will show here.
-      </p>
+    <main className={dark ? 'site dark' : 'site'}>
+      <nav className="nav wrap">
+        <a className="brand" href="#top" aria-label="Fady Desoky home"><span>FD</span><b>Fady Desoky</b></a>
+        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
+        <div className={menuOpen ? 'nav-links open' : 'nav-links'}>
+          <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+          <button className="theme-toggle" onClick={() => setDark(!dark)} aria-label="Toggle color theme">{dark ? '☼' : '◐'}</button>
+        </div>
+      </nav>
+
+      <header id="top" className="hero wrap">
+        <div className="hero-copy">
+          <p className="eyebrow">DATA ANALYST · ASPIRING DATA ENGINEER</p>
+          <h1>Turning complex data into <em>clear direction.</em></h1>
+          <p className="lede">I&apos;m Fady, a software engineering student and data analytics intern based in Cairo. I build thoughtful dashboards, predictive models, and sustainable data solutions.</p>
+          <div className="hero-actions"><a className="button primary" href="#projects">View my work <span>↗</span></a><a className="button secondary" href="mailto:fadydesoky45@gmail.com">Let&apos;s connect</a></div>
+        </div>
+        <div className="hero-stat"><div className="orb"><div className="orb-core">FD</div></div><p><strong>3+</strong> years exploring<br />data, systems &amp; impact.</p></div>
+      </header>
+
+      <section id="about" className="about wrap section-grid"><div className="section-label">01 / ABOUT</div><div><h2>Curious by nature.<br /><span>Impact-driven by choice.</span></h2><p>I&apos;m a senior Software Engineering student at Sadat Academy for Management Sciences, with a focus on analytics, data engineering, and sustainability. My work sits at the intersection of technical systems and the people they serve.</p><p>From multinational HR operations to green software research, I enjoy making messy information useful, measurable, and actionable.</p></div></section>
+
+      <section id="experience" className="experience wrap section-grid"><div className="section-label">02 / EXPERIENCE</div><div className="timeline">{experience.map((item) => <article className="timeline-item" key={item.role}><div className="dot" /><div><p className="date">{item.date}</p><h3>{item.role}</h3><p className="company">{item.company}</p><p className="muted">{item.text}</p></div></article>)}<a className="text-link" href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">See full experience on LinkedIn ↗</a></div></section>
+
+      <section id="projects" className="projects wrap section-grid"><div className="section-label">03 / SELECTED WORK</div><div className="project-card"><div className="project-number">01</div><div><p className="eyebrow">PYTHON · MACHINE LEARNING · SUSTAINABILITY</p><h2>Energy Consumption Analysis for Software Systems</h2><p className="muted">An exploratory and predictive analysis of software energy consumption. Built data pipelines, visualized patterns, and developed models to forecast energy usage trends.</p><div className="tags"><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Matplotlib</span></div><a className="text-link" href="https://github.com/Fadydesoky/Energy-Consumption-Analysis-for-Software-Systems" target="_blank" rel="noreferrer">View project on GitHub ↗</a></div></div></section>
+
+      <section className="skills wrap section-grid"><div className="section-label">04 / TOOLKIT</div><div><h2>Tools I use to<br /><span>make things happen.</span></h2><div className="skill-list">{skills.map(skill => <span key={skill}>{skill}</span>)}</div></div></section>
+
+      <section id="contact" className="contact wrap"><p className="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make something<br /><em>meaningful.</em></h2><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a></section>
+      <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div><a href="mailto:fadydesoky45@gmail.com">Email</a><a href="https://github.com/fadydesoky" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
     </main>
   )
 }
