@@ -3,8 +3,8 @@
 import { useState } from 'react'
 
 const experience = [
+  { role: 'Data Analytics & Reporting Intern', company: 'Nestlé Business Solutions', date: 'Apr 2026 — Present', text: 'Developing interactive Power BI and Excel dashboards, structuring datasets, and contributing to forecasting models across MENA.' },
   { role: 'Advanced Data Analytics', company: 'National Telecommunication Institute (NTI) · Internship', date: 'Aug 2026 — Sep 2026 · 2 mos', text: 'Advanced training in data analysis and statistical data analysis, delivered remotely from Egypt.' },
-  { role: 'Data Analytics Intern', company: 'Nestlé Business Solutions', date: 'Apr 2026 — Present', text: 'Developing interactive Power BI and Excel dashboards, structuring datasets, and contributing to forecasting models across MENA.' },
   { role: 'HR Operations Process Optimizer', company: 'Nestlé Business Solutions', date: 'Jul 2025 — Mar 2026', text: 'Collected, cleaned, and validated employee data with regional HRS teams across KSA, Kuwait, Oman, Bahrain, Qatar, and UAE.' },
   { role: 'Data Analytics & Urban Mobility Research Intern', company: 'Nile University', date: 'Jun 2025 — Sep 2025', text: 'Analyzed urban mobility patterns for the NetMob25 Data Challenge; research was accepted as a conference poster.' },
   { role: 'Software Engineering & IT Intern', company: 'Maher Ahmed Belal Consulting', date: 'Jun 2025 — Aug 2025', text: 'Built and optimized internal document workflow tools, reducing processing time by 30%.' },
