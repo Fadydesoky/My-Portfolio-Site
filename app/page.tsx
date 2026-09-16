@@ -60,6 +60,7 @@ export default function Page() {
 
       <section id="contact" className="contact wrap"><p className="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make something<br /><em>meaningful.</em></h2><div className="contact-actions"><a className="button primary" href="mailto:fadydesoky45@gmail.com">Start a conversation <span>↗</span></a><a className="button secondary" href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp / SMS <span>↗</span></a></div><p className="location">Based in Nasr City, Cairo, Egypt</p></section>
       <footer className="footer wrap"><span>© 2026 Fady Desoky</span><div className="footer-nav"><a href="#top">Back to top ↑</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/research">Research</a><a href="#contact">Contact</a></div><div><a href="mailto:fadydesoky45@gmail.com">Email</a><a href="https://wa.me/201030356690" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://github.com/fadydesoky" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/fadydesokysaeedabdelaziz/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+      <div className="bottom-navigator" aria-label="Section navigation"><a href="#top">Top</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/research">Research</a><a href="#contact">Contact</a></div>
     </main>
   )
 }
